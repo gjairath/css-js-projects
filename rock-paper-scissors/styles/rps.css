@@ -19,6 +19,9 @@
     display: flex;
     flex-direction: column;
     width: 40%; /*40% for the HS 40% for Computer, 20% for the tally */
+
+    background-color: #e7eff9;
+    background-image: linear-gradient(180deg, #e7eff9 0%, #cfd6e6 40%);
 }
 
 .tally {
@@ -40,6 +43,8 @@
     font-weight: bold;
     font-size: 1.6rem;
     font-family: "Times New Roman", Monaco;
+    
+    background: rgba(232, 236, 241, 1);
 }
 
 
@@ -54,8 +59,8 @@
 
 .button-choose {
     margin-left: 40px;
-    height: 36px;
-    width: 100px;
+    height: 42px;
+    width: 115px;
     
     border-radius: 5px;
     cursor: pointer;
@@ -66,6 +71,8 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    
+    margin-right: 32px;
  }
  
  .button-text {
