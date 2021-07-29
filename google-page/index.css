@@ -1,0 +1,152 @@
+:root {
+  --gray: rgba(232, 232, 232, 1);
+}
+#top-right-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#gmail, #images {
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+#grid {
+  width: 34px;
+  height: 32px;
+  margin-right: 8px;
+  margin-left: 6px;
+}
+
+#grid:hover, #user-icon:hover {
+  background-color: var(--gray);
+  border-radius: 32px;
+}
+
+body {
+  font-family: arial,sans-serif;
+}
+
+.top-right-icon {
+  text-decoration: none;
+  color: black;
+  font-size: 11px;
+}
+
+.top-right-icon:hover{
+  text-decoration: underline;
+}
+
+#user-icon{
+  height: 42px;
+  width: 38px;
+  margin-bottom: 5px;
+}
+
+.user-img {
+  border-radius: 24px;
+  margin-left: 3px;
+  margin-top: 5px;
+}
+
+
+.material-icons{
+  padding-left: 5px;
+  padding-top: 4px;
+  font-size: 22px    !important;
+  font-weight: light;
+  color: gray;
+}
+
+#doodle {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+#google-doodle{
+  font-size: 200px !important;
+}
+
+#input-div-o {
+  display:flex;
+  flex-direction: column;
+}
+#input-div{
+  display:flex;
+  justify-content: center;
+  
+}
+
+#input {
+  width: 482px;
+  margin-top: 15px;
+  margin-left: 20px;
+  border-radius: 20px;
+  height: 35px;
+  border: 1px solid #dfe1e5;
+  background: white;
+  
+  background-image: url('images/searchicon.png');
+    background-position: 8px 8px; 
+    background-repeat: no-repeat; 
+    padding-left: 2rem;
+    background-size: 18px;
+}
+
+#mic {
+ margin-left: -50px;
+  height: 0px;
+  width: 40px;
+  margin-top: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  
+  padding-left: 15px;
+  padding-top: 6px;
+}
+
+#input:hover {
+  border-color: transparent;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+ 
+}
+
+#input:focus-within {
+    outline: none;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    border-color: transparent;
+
+}
+
+.more-buttons {
+  margin-top: 15px;
+}
+
+.button-search {
+  padding: 9px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-search:hover {
+      box-shadow: 0 1px 4px 0 rgba(32, 33, 36, 0.28);
+
+}
+
+#also-offered {
+  display: flex;
+  justify-content: center;
+}
+
+#also-off-inner {
+  margin-top: 15px;
+  font-size: 0.65em;
+}
+
+#also-off-inner > a {
+  color: blue;
+}
