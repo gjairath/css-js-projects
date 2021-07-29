@@ -1,0 +1,163 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+    --main-red: #be3144;
+    --main-pink: rgba(219, 10, 91, 1);
+    --main-blue: #3700B3;
+    --main-white: rgba(238,238,238, 0.9);
+}
+
+body {
+  background-color: rgb(255,0,255, 0.04);
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  background: var(--main-white);
+  top: 0;
+  min-height: 70px;
+}
+
+.nav-items{
+  list-style: none;
+  display: flex;
+  
+}
+.nav-items a {
+    display: block;
+    font-size: 1.1rem;
+    padding: 1.2rem;
+}
+.nav-items a:hover{
+  color: var(--main-red);
+  transition: color 0.3s ease-out;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+.logo-class {   
+  width: 60vw;
+}
+
+.logo-class > img {
+  max-height: 80px;
+  height: 100%;
+  width: 100%;
+  max-width: 150px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+#stuff-below{
+  margin-top: 6.5rem;
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  height: 150px;
+}
+
+#features .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    width: 20vw;
+    color: gray;
+}
+
+#form{
+  display:flex;
+  flex-direction: column;
+  
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 0.8rem;
+}
+#submit {
+  width: 50%;
+  margin-top: 5px;
+  
+  background-color: #f1c40f;
+  border: none;
+  
+  height: 35px;
+  width: 100%;
+  cursor: pointer;
+  
+  font-weight: 1000;
+  font-size: 0.9rem;
+}
+
+
+h1 {
+  color: black;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+
+#features {
+  margin-top: 10px;
+}
+
+
+.grid {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 12rem;
+}
+
+#features .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  width: 80vw;
+  padding: 5px;
+  
+  padding-left: 3rem;
+}
+
+#email {
+    max-width: 250px;
+    width: 100%;
+    padding: 5px;
+  
+}
+
+#cool-videos{
+  display:flex;
+  justify-content: center;
+  
+  padding-top: 3rem;
+}
+
+#cool-videos > iframe {
+     max-width: 560px;
+    width: 100%;
+}
