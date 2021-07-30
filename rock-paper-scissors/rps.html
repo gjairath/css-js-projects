@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <script src="scripts/rps.js"></script>
+
 </head>
 
 
@@ -20,7 +22,7 @@
             <!-- The human options -->        
             <div class="human-options">  
               <div class="human-tags"> 
-                <a href="#"><button class="button-choose">
+                <a href="#"><button class="button-choose"  onmouseover = "show('rock.svg')" onmouseout="hide()">
                         <img src="images/rock.svg" height="25px">
                 
                 
@@ -28,19 +30,25 @@
                 
                 </button></a>
                 
-                <a href="#"><button class="button-choose">
+                <a href="#"><button class="button-choose" onmouseover = "show('paper.svg')" onmouseout="hide()">
                                         <img src="images/paper.svg" height="25px">
                 <div class="button-text">Paper</div>
                 
                 </button></a>        
-                <a href="#"><button class="button-choose">                
+                <a href="#"><button class="button-choose" onmouseover = "show('scissors.svg')" onmouseout="hide()">                
                                 <img src="images/scissors.svg" height="25px">
                 <div class="button-text">Scissors</div>
                 </button></a>
-              </div> 
+              </div>
+              
+               
             </div>
 
-        
+              
+              <div class="human-image">
+                  <img style="visibility:hidden" id = "img1">
+
+              </div>        
         
         
         
@@ -53,13 +61,55 @@
             <div class="side-top-header">
                     TALLY
             </div>
-            
+
+                <div class="boxes-tally">
+                    <div class="box sexy-box" id="box1">
+                        <div class="box-header">
+                        WINS
+                        </div>
+                        
+                        <div class="box-body">
+                        0
+                        </div>
+                        
+                    </div>
+           
+                    <div class="box sexy-box" id="box1">
+                        <div class="box-header">
+                        TIES
+                        </div>
+                        
+                        
+                        <div class="box-body">
+                        0
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="box sexy-box" id="box1">
+                        <div class="box-header">
+                        WINS
+                        </div>
+                        
+                        
+                        <div class="box-body">
+                        0
+                        </div>
+                        
+                    </div>
+                </div>
+                    
+                    
+            <div class="round-tally">
+                <h1> Round 1 </h1>
+            </div>
+        
         </div>
     
     <!-- The computer DIV latter 40% reusing the class div because im lazy-->
             <div class="human-side computer sexy-box">
             <div class="side-top-header">
-                    COMPUTER
+                    EASY COMPUTER
             </div>
 
             </div>
