@@ -22,7 +22,8 @@
             <!-- The human options -->        
             <div class="human-options">  
               <div class="human-tags"> 
-                <a href="#"><button class="button-choose"  onmouseover = "show('rock.svg')" onmouseout="hide()">
+                <a href="#"><button class="button-choose"  onmouseover = "show('rock.svg')" 
+                                                onmouseout="hide()" onclick= "clicked('r')">
                         <img src="images/rock.svg" height="25px">
                 
                 
@@ -30,12 +31,14 @@
                 
                 </button></a>
                 
-                <a href="#"><button class="button-choose" onmouseover = "show('paper.svg')" onmouseout="hide()">
+                <a href="#"><button class="button-choose" onmouseover = "show('paper.svg')" 
+                                onmouseout="hide()" onclick= "clicked('p')">
                                         <img src="images/paper.svg" height="25px">
                 <div class="button-text">Paper</div>
                 
                 </button></a>        
-                <a href="#"><button class="button-choose" onmouseover = "show('scissors.svg')" onmouseout="hide()">                
+                <a href="#"><button class="button-choose" onmouseover = "show('scissors.svg')" 
+                                onmouseout="hide()" onclick= "clicked('s')">                
                                 <img src="images/scissors.svg" height="25px">
                 <div class="button-text">Scissors</div>
                 </button></a>
@@ -103,7 +106,12 @@
             <div class="round-tally">
                 <h1> Round 1 </h1>
             </div>
+
+            <div class="round-output">
+                <p> Play a round! </p>
+            </div>
         
+                
         </div>
     
     <!-- The computer DIV latter 40% reusing the class div because im lazy-->
@@ -111,6 +119,16 @@
             <div class="side-top-header">
                     EASY COMPUTER
             </div>
+            
+        
+            <!-- Empty div mirroring structure for human side because padding is boring -->    
+            <div class="human-options">  
+                </div>
+            
+            <div class="human-image">
+                  <img style="visibility:hidden" id = "img2">
+
+              </div>     
 
             </div>
 
