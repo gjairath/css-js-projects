@@ -51,6 +51,29 @@ function parse_c_image(c_s) {
     return c_src
 }
 
+function increment(type){
+
+
+    if (type == 1) {
+
+        const wins = document.querySelector('.box-win');        
+        let new_wins = parseInt(wins.textContent) + 1;        
+        wins.textContent = new_wins;
+    } else if (type == 0) {
+
+        const wins = document.querySelector('.box-tie'); 
+        let new_wins = parseInt(wins.textContent) + 1;
+        wins.textContent = new_wins;
+    } else {
+
+        const wins = document.querySelector('.box-loss');        
+        let new_wins = parseInt(wins.textContent) + 1;
+        wins.textContent = new_wins;
+
+    }
+}
+
+
 function play_round(p_s) {
 
     // Guy clicked something so now we go!
@@ -69,11 +92,7 @@ function play_round(p_s) {
     document.getElementById("img2").src = "images/" + parse_c_image(c_s);
 
      // c_s: initial for computer selection;  
-    
-    // 3P1= 3 * 3 fucking oh god.
-    
-    // alright
-    
+        
     if (p_s == "r") {
     
         if (c_s == "s") {
@@ -103,6 +122,14 @@ function play_round(p_s) {
             message.textContent = "You Lose."
         }
     
+    }
+    
+    if (message.textContent == "You Win.") {
+        increment(1);
+    } else if (message.textContent == "Tie.") {
+        increment(0);
+    } else {
+        increment(-1);
     }
     
 }
