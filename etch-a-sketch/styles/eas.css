@@ -1,0 +1,78 @@
+#etch-container {
+    background-color: #ededed;
+    
+    margin-top: -550px;    
+    margin-left: 35vw;
+    height: 640px;
+    width: 640px; /* 292 px */
+    
+    display: grid;
+    z-index: 100;
+}
+
+.row-divs {
+    display: flex;
+}
+
+.grid-divs {    
+    color: white;
+}
+
+
+.grid-divs:hover{
+    color: red;
+    z-index: 30;
+}
+
+.utilities {
+    margin-top: 100px;
+    margin-left: 100px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 150px;
+    
+    justify-content: space-around;
+}
+
+h1 {
+    font-weight: light;
+    font-family: Monaco, Sans-serrif;
+    
+    color: blue;
+    padding-bottom: 20px;
+    
+    text-decoration: underline;
+}
+
+.button-clear {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.8);
+      background: rgb(43, 55, 182);
+      padding: 15px 40px;
+      border-radius: 4px;
+      font-weight: normal;
+      text-transform: uppercase;
+      transition: all 0.2s ease-in-out;
+
+    cursor: pointer;
+    width: 200px;
+    margin-left: 20px;
+    
+    font-size: 1.5rem;
+
+    margin-bottom: 30px;
+}
+
+.hover-effects {
+  color: red;
+  box-shadow: 0 50px 50px rgba(145, 92, 182, .4);
+  margin-top: 5px;
+}
+
+.button-clear:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
