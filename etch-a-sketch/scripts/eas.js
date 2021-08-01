@@ -41,7 +41,7 @@ const grid_width = 640;
 // Taken from here ^
 function generate_random_color() {
     var o = Math.round, r = Math.random, s = 255;
-    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+    return 'rgb(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
 }
 
 
@@ -72,8 +72,10 @@ function construct_16_grid(m, n) {
             } else if (random_flag == false && color_flag == true) {
                 random_color = generate_random_color();
                 
-                div.addEventListener("mouseover", function () {                  
-                        div.style.background = random_color; })
+                
+                
+                let string = "this.style.background='" + random_color + "';";                
+                div.setAttribute("onmouseover", string);
             }
             
             div.style.height = grid_height / current_m + "px";
@@ -89,6 +91,8 @@ function reset_btn() {
     random_flag = false;
     current_m = 16;
     current_n = 16;
+    document.getElementById("funcolors").classList.remove("hover-effects"); 
+    document.getElementById("random").classList.remove("hover-effects"); 
 
     clear_grid();
 }
