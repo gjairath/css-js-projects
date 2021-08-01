@@ -29,7 +29,7 @@ body {
 }
 
 .utilities {
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: 100px;
     
     display: flex;
@@ -79,4 +79,9 @@ h1 {
 .button-clear:hover {
   color: rgba(255, 255, 255, 1);
   box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
+
+#size {
+    margin-top: -35px;
 }

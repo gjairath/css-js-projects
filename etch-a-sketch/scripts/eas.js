@@ -4,6 +4,7 @@ let current_n = 16;
 let color_flag = false;
 let random_flag = false;
 
+
 function randomize_colors() {
     color_flag = !color_flag; 
     
@@ -46,7 +47,10 @@ function generate_random_color() {
 
 
 function construct_16_grid(m, n) {
-
+    document.getElementById("size").innerText = "Current Size: " + current_m + "x" + current_n 
+                                                + "\nColor-mode: " + color_flag
+                                                + "\nRandom-mode: " + random_flag; 
+    
     for(let i = 1; i <= m; i++) {
         var row_div = document.createElement("div");
         row_div.setAttribute("class", "row-divs");
