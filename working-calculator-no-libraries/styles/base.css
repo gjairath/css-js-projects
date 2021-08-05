@@ -1,0 +1,112 @@
+:root{
+    --apple-gray: #666666;
+    --apple-black: #1C1C1C;
+    --apple-orange: #FF9500;
+    --apple-lgray: rgb(212, 212, 190, 70%);
+}
+
+body {
+    background-color: #B7A6AD;
+    zoom: 120%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.space-elems{
+    margin-bottom: 9px;
+}
+
+.orange{
+    background-color: var(--apple-orange) !important;
+}
+
+.lg {
+    background-color: var(--apple-lgray) !important;
+    color: black !important;
+}
+
+.special-icon{
+    width: 108px !important;
+    text-align: left;
+    padding-left: 15px !important;
+}
+
+.nice-box {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    
+    border-radius: 12px;
+}
+
+#outside-layer{
+    height: 420px;
+    width: 350px;
+    margin-left: 25vw;
+    margin-top: 5vh;
+    display:flex;
+    flex-direction: column;
+}
+
+#screen{
+    flex: 0.35; /* take up 35% of the top thingy */
+    background-color: var(--apple-black);
+    border-radius: 0px;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#text-display{
+    flex: 0.2;
+    color: white;
+    font-size: 60px;
+    text-align: right;
+
+    padding-right: 65px;
+    padding-bottom: 20px;
+}
+
+#buttons-grid{
+    flex: 0.65;
+    background-color: var(--apple-black);
+    border-radius: 0px;
+    
+    padding-left: 30px;
+        
+    display: flex;
+    justify-content: space-around;
+    
+    flex-direction: column;
+    
+}
+
+#first-row{
+    flex: 0.2; /*5 rows 20% each*/
+}
+
+.buttons-calculation{
+    border-radius: 25px;
+    height: 42px;
+    width: 42px;
+    padding: 2px;
+    margin-left: 20px;
+            
+    border: none;
+    
+    cursor: pointer;
+    
+    background-color: var(--apple-gray);
+    
+    font-size: 18px;
+
+    color: rgb(212, 212, 190);
+    transition: 0.4s ease-out all;
+}
+
+.buttons-calculation:active{
+    background-color: white !important; /* im so clever */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
