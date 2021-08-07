@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+
+
+    <div class="top-banner">
+    
+        <div id="dark-mode-item-one">
+                <button id="light-mode-btn" onclick="toggle_light_mode()"> 
+                    
+                    <div id="content-light-btn">
+                    Library                 
+                        <span class="material-icons" id="light-mode-icon">
+                        light_mode
+                        </span>
+                        
+                    </div>
+
+                </button>
+        </div>
+        
+        <div id="filter-item-two">
+            <form class="search-item" action="">
+                <input type="search" placeholder="Search Your Library" id="search-bar" class="" maxlength="255" value="">
+            </form>
+        </div>
+    
+    
+    <div id="add-item-three">
+                <button class="btn" id="add-book-btn" onclick="addBookToLibrary()">Add book</button>
+    </div>
+    
+    </div>
+
+
+
+<!-- body below -->
+    <div id="container-below">
+
+
+        <div class="card">
+          <div class="container" id="card-body">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+          </div>
+        </div>
+        
+        
+    </div>
+
+    
+</body>
+
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">    
+<link rel="stylesheet" href="styles/library.css">
+
+
+    <script src="scripts/library.js"></script>
+
+</html>
