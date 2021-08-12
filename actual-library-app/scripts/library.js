@@ -10,9 +10,7 @@ function generate_random_color() {
 
 var first_run = true;
 const all_read_fn = () => {
-    console.log(this.id);
     for (let idx = 0; idx < full_library.full_library.length; idx++) {
-        console.log(full_library.full_library);
         
         if (first_run == true) {
             full_library.full_library[idx].isRead = true;
@@ -28,6 +26,31 @@ const all_read_fn = () => {
     saveBooks();
     displayBooks();
 }
+
+
+function search_cards() {
+
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('search-bar');
+  filter = input.value.toUpperCase();
+    
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < card_grid.children.length; i++) {
+    let child_card = card_grid.children[i];
+    
+    title_content = child_card.children[1].children[0];
+    
+    txtValue = title_content.textContent || title_content.innerText;
+    console.log(txtValue);
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      child_card.style.display = "";
+    } else {
+      child_card.style.display = "none";
+    }
+  }
+}
+
 
 // -------------------------------------------------
     // Relevant Classes
@@ -49,11 +72,8 @@ class Library {
 
   remove(id) {
 
-    console.log(this.full_library);
     this.full_library = this.full_library.filter((book) => book.id !== id);
     displayBooks();
-    
-    console.log(this.full_library);
   }
 
   find(id) {
@@ -161,23 +181,14 @@ function toggle_light_mode() {
 
   mini_top.classList.toggle("dark-mode");
   top_banner.classList.toggle("dark-mode");
-  container_below.classList.toggle("dark-mode");
+  container_below.classList.toggle("dark2-mode");
   
-  card_grid.classList.toggle("dark2-mode");
-
   var children = card_grid.children;
   for (var i = 0; i < children.length; i++) {
-      
+
+        // change each card not card container.      
       children[i].children[0].style.backgroundColor = "#404040";
-      
-      console.log(children[i].children);
-      
-      let card = children[i].children[0];
-      let read_btn = card.children[1];
-      let delete_btn = card.children[0];
-      
-      read_btn.style.backgroundColor = "#B3B3B3";
-      delete_btn.style.backgroundColor = "#B3B3B3";
+            
     }  
   
   var lightbulb = document.getElementById("content-light-btn")
@@ -185,8 +196,10 @@ function toggle_light_mode() {
       // will revert to light mode now.
       lightbulb.style.color = "black";
       displayBooks();
+      
   } else{
       lightbulb.style.color = "blue";
+      document.getElementById("warning-item").innerText = "";
   }
 }
 
@@ -198,7 +211,6 @@ function close_modal() {
 // ------------ MAIN -------------------
 function displayBooks() {
     card_grid.innerHTML = "";
-    console.log(full_library.full_library);
     // create cards and upload them.
     for (let book of full_library.full_library) {
           const bookContainer = document.createElement('div');
@@ -265,11 +277,9 @@ function displayBooks() {
 
 function deleteBook() {
     let book_idx = parseInt(this.id) + 1;
-    console.log(this);
     if(confirm(`Are you sure you want to delete this Book?`) == false){
         return;
     }
-    console.log(this.id);
     full_library.remove(book_idx - 1);
     
     saveBooks();
@@ -277,7 +287,6 @@ function deleteBook() {
 }
 
 function readBook() {
-    console.log(this);
     
     // this is the index thats static with each book object
     let read_idx = this.getAttribute("data_val")
@@ -286,9 +295,7 @@ function readBook() {
 
         
     full_library.full_library[book_idx].isRead = !full_library.full_library[book_idx].isRead;
-    
-    console.log(full_library.full_library);
-    
+        
     toggleClass(document.getElementById("read" + read_idx), "btn-success");
     saveBooks();
 }
@@ -309,19 +316,16 @@ const saveBooks = () => {
 
 
 const convToBook = (book) => {
-    console.log(book.name);
   return new Book(book.name, book.author, book.pages, book.isRead, book.color, book.id);
 }
 
 const restoreLocal = () => {
   const all_books = JSON.parse(localStorage.getItem('full_library'));
-  console.log(all_books);
   
   if (all_books.length !== 0) {
       
       for (let book of all_books) {
           // The books that are added are already unqiue, use constant complexity
-          console.log(convToBook(book));
           full_library.full_library.push(convToBook(book));
           num_books = num_books + 1;
       }
@@ -348,7 +352,7 @@ function prompt_test(){
 
 function test(num_books){
     for (let val = 0; val < num_books; val++) {
-        const test1 = new Book(val, val, val * getRandomInt(1000), Math.random() < 0.5, generate_random_color(), val);
+        const test1 = new Book(val.toString(), val, val * getRandomInt(1000), Math.random() < 0.5, generate_random_color(), val);
         full_library.full_library.push(test1);
     }
     saveBooks();
