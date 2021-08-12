@@ -21,6 +21,7 @@ const all_read_fn = () => {
     }
     
     if (first_run == true) {
+        warning_item.innerHTML = "Your data is being stored locally..."
         first_run = false;
     }
     saveBooks();
