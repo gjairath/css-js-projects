@@ -7,7 +7,7 @@
 <body>
 
 
-    <div class="top-banner">
+    <div class="top-banner" id="top-banner">
     
         <div id="dark-mode-item-one">
                 <button id="light-mode-btn" onclick="toggle_light_mode()"> 
@@ -29,30 +29,48 @@
             </form>
         </div>
     
+    <div id="warning-item">
+    </div>
     
     <div id="add-item-three">
-                <button class="btn" id="add-book-btn" onclick="addBookToLibrary()">Add book</button>
+                <button class="" id="add-book-btn">Add book</button>
+
     </div>
     
     </div>
-
-
-
-<!-- body below -->
-    <div id="container-below">
-
-
-        <div class="card">
-          <div class="container" id="card-body">
-            <h4><b>John Doe</b></h4>
-            <p>Architect & Engineer</p>
-          </div>
+    
+    <div class="mini-topbar" id="mini-top">
+    <div class="handy-toolbar">
+                                <button id="dbug" onclick="prompt_test()">dbug</button>
+                              <input class="checkbox" id="all_read" type="checkbox"> All Read?
+    </div>
+    </div>
+        
+    <!-- Modal -->            
+    <div class="modal hidden hide" id="add-book-modal">
+          <form class="add-book-form slide-animation" id="add-book-form">
+            <div class="title">Add new book</div>
+            <input class="input" type="text" id="title" placeholder="Title" required="">
+            <input class="input" type="text" id="author" placeholder="Author" required="">
+            <input class="input" type="number" id="pages" placeholder="Pages" required="">
+            <div class="is-read">
+              <label for="is-read">Have you read it?</label>
+              <input class="checkbox" id="isRead" type="checkbox">
+            </div>
+            <button class="btn" type="submit" id="form-submit">Submit</button>
+          </form>
         </div>
         
         
-    </div>
+<!-- body below -->
+    <div id="container-below">
 
     
+            <div id="card-grid">
+                    </div>                    
+                
+    </div>
+            
 </body>
 
 

@@ -1,14 +1,35 @@
 body{
     margin: 0;
+    overflow-y: hidden;
 }
-
+.root {
+    --primary-text: #FFFFFF;
+    --secondary-text: #B3B3B3;
+    -bl: #18191A;
+    --secondary-bl: #181818;
+}
 
                                     /* Utility Classes */
 
 .dark-mode {
-  background-color: black;
+  background-color: #121212;
   color: white;
 }
+
+.dark2-mode{
+    background-color: #181818;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.hide {
+    opacity: 0;
+    height: 0px !important;
+}
+
 
 
                                     /* The top banner stuff */
@@ -33,13 +54,13 @@ body{
     display: flex;
     align-items: center;
     
-    color: blue;
+    color: black;
 }
 
 
 #light-mode-icon{
     padding-left: 5px;
-    color: black;
+    color: inherit;
 }
 
 #light-mode-btn{
@@ -71,13 +92,25 @@ body{
     height: 60%;
     
     background-image: url('images/searchicon.png');
-    background-position: 4px 6px; 
+    background-position: 4px 2px; 
     background-repeat: no-repeat; 
     padding-left: 2rem;
     background-size: 26px;
     
     font-size: 18px;
+    color: blue;
 
+}
+
+#warning-item{
+    width: 250px;
+    color: red;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-left: 100px;
+    font-size: 1.5rem;
 }
 
 #add-item-three{
@@ -95,12 +128,11 @@ body{
 
 .btn {
     padding: 10px;
-    border: 2px solid var(--border);
+    border: 2px solid green;
     border-radius: 5px;
     font-weight: bold;
     transition: transform 0.15s ease-in-out;
     cursor:pointer;
-    
 }
 
 #add-book-btn{
@@ -109,34 +141,209 @@ body{
     color: blue;
     box-shadow: 0 2px 2px rgba(145, 92, 182, .4);
     font-size: 1.3em;
-    padding-bottom: 0.5rem;
+
+    border: 2px solid green;
+
+    padding: 5px;
+    border-radius: 15px;
+    cursor:pointer;
+    
 }
 
-#add-book-btn:hover {
+.btn:hover, #add-book-btn:hover {
   box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
   transform: translateY(2px);
 }
                                         /* Body below banner */
-                                        
-
+                 
+                 
 #container-below{
-    height: calc(100vh - 15vh - 50px);
+    z-index: 15;
+    
+    width: 100%;
+    overflow: auto;
+    
+    display: inline-block;
+    
 }
 
-.card {
-  margin-top: 50px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                                        
+#card-grid{
+    height: calc(100vh - 8vh);    
+    z-index: 1;
+    position: relative;
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.card-container {
   transition: 0.3s;
-  width: 40%;
+  width: 180px;
+  height: 280px;
   border-radius: 5px;
+  display: inline-block;
+  
+  margin-top: 30px;
+  margin-left: 30px;
+  
 }
 
-.card:hover {
+.card-container:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.card{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
+    height: 230px;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 40px;
+    width: 100%;
+    
+    overflow: hidden;
+    padding-top: 5px;
+    
+}
+
+.title-content{
+    margin: 0;
+    padding-top: 2px;
+    font-size: 10px;
+    
+    color: var(--primary-text);
+}
+
+.author-content{
+    font-size: 15px;
+    margin-top: 0 !important;
+    
+    color: var(--secondary-text);
+}
 
 
-.container {
-  padding: 2px 16px;
+.modal {
+    width: 350px;
+    height: 250px;
+    padding: 40px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: #ededed;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    
+    position: absolute;
+    right: 0;    
+    z-index: 2;
+    
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+
+.add-book-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 110px;
+    position: absolute;
+    gap: 15px;
+}
+
+.slide-animation {
+    animation: slide 3.5s ease;
+}
+
+@keyframes slide
+{
+from {opacity:0;}
+to {opacity: 1;}
+}
+
+
+.title {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.add-book-form > input{
+    height: 30px;
+    width: 200px;
+}
+
+#form-submit{
+    width: 200px;
+    height: 30px;
+    font-size: 1.2rem;
+    padding-bottom: 30px;
+    background-color: #966FD6;
+    
+    color: white;
+}
+
+
+.btn-card{
+    width: 150px !important;
+    margin-left: 15px;
+    margin-top: 50px;
+    
+    overflow: hidden;
+
+}
+
+.btn-success{
+    background-color: green;
+}
+
+.delete-btn{
+    width: 25px;
+    margin-left: 155px;
+    
+    border-radius: 6px;
+    cursor: pointer;
+    
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.delete-btn:hover{
+  background-color: red;
+}
+
+.mini-topbar{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.handy-toolbar{
+    margin-right: 100px;
+    position: relative;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#dbug{
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid green;
+    cursor: pointer;
 }
