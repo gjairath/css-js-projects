@@ -28,9 +28,10 @@ const all_read_fn = () => {
 }
 
 
+// Taken from docs and modified
 function search_cards() {
 
-  var input, filter, ul, li, a, i, txtValue;
+  var input, filter, txtValue;
   input = document.getElementById('search-bar');
   filter = input.value.toUpperCase();
     
