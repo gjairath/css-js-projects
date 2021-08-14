@@ -147,6 +147,11 @@ function add_class_box(i, j, k, class_name) {
 }
 
 function strike_through(linear_line, winner){
+    
+    if (game_over == true) {
+        // does weird shit 
+        return;
+    }
 
     // strike through terminal condition
     if (linear_line == "diag") {        
