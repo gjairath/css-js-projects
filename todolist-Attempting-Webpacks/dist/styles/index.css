@@ -1,0 +1,311 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+
+:root{
+
+    --green: #68c204;
+    
+    --dark-blue: #334c6b;
+    --light-blue: #2fb5f5;
+
+    --gray: #ededed;
+    --light-gray: #f6f6f5;
+    
+    --white: #fff;
+    --black: #000;
+    
+    --red: #eb655e;
+    
+    
+    --black1: #181818;
+    --black2: #454545;
+}
+
+
+/* Quick Mafs. 1+1 */
+
+#content-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+#side-bar{
+    width: 300px;
+    background-color: var(--light-gray);
+    height: 100%;
+    position: fixed;
+}
+
+#content-side-bar{
+    height: 90%;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.titles{
+
+    font-size: 2.1em;
+    color: var(--black2);
+}
+
+.underline-divider {
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--black1);
+}
+
+.projects{
+    margin-top: 40px;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+    gap: 35px;
+}
+
+.btn{
+    height: 80px;
+    width: 220px;
+    
+    border-radius: 25px;
+    border: 1px solid var(--black2);
+    cursor: pointer;
+}
+
+.btn:hover {
+  border-color: transparent;
+  box-shadow: 0 1px 5px 0 rgba(32, 33, 36, 0.28);
+}
+
+.status-btn{
+    height: 42px;
+    max-width: 150px;
+    min-width: 150px;
+    
+    border-radius: 25px;
+    cursor: pointer;
+    
+    background-color: var(--dark-blue);
+    color: white;
+    font-weight: 800;
+    border: 1px solid var(--black1);
+    padding: 10px;
+    font-size: 0.95em;
+}
+
+#main-view{
+    width:calc(100vw - 300px);
+    margin-left: 300px;
+    height: 100%;
+}
+
+#main-top-bar{
+    height: 65px;
+    width: 100%;
+    
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+
+#main-items{
+    display: flex;
+    margin-right: 50px;
+}
+
+#search-bar{
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    
+    height: 35px;
+    width: 250px;
+      
+    background-image: url('images/searchicon.png');
+    background-position: 220px center;
+    background-repeat: no-repeat;
+    padding-left: 0.7em;
+    background-size: 22px;
+    
+    
+    font-size: 18px;
+}
+
+#main-project-view{
+    height: calc(100vh - 65px);
+    width: inherit;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-project-content{
+    height: 95%;
+    width: 95%;
+}
+
+table.fixed td {overflow:hidden;}
+table.fixed td:nth-of-type(1) {width:40%;}
+table.fixed td:nth-of-type(2) {width:40%;}
+table.fixed td:nth-of-type(3) {width:20%;}
+
+th {
+  text-align: left;
+  color: var(--black1);
+}
+
+th, td {
+  padding: 15px;
+}
+
+
+#add-project-div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 220px;
+    
+    position: fixed;
+}
+
+#add-content{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#add-project{    
+    height: 45px;
+    width: 100px;
+    border-radius: 25px;
+    border: 1px solid var(--black2);
+    cursor: pointer;  
+    
+    margin-left: 120px; 
+}
+
+
+#add-task{
+    height: 45px;
+    width: 100px;
+    border-radius: 25px;
+    border: 1px solid var(--black2);
+    cursor: pointer;   
+
+    margin-left: auto;
+    margin-right: 100px;
+    
+    background-color:inherit;
+}
+    
+.modal {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    border: 2px solid var(--black2);
+    border-radius: 10px;
+    background-color: var(--black2);
+    
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0);
+}
+.modal-active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 200ms ease-in-out;    
+}
+
+.modal-form{
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+}
+    
+label{
+    color: var(--gray) !important;
+    text-align: left;
+    
+    font-size: 2.1em;
+}
+
+input, textarea{
+    height: 40px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+
+.active {
+  display: block;
+  z-index: 0;
+}
+
+#submit-div{
+    display: flex;
+    justify-content: space-around;
+    
+    padding-top: 30px;
+}
+
+.submit-btns{
+    height: 50px;
+    width: 250px;
+    
+    background-color: var(--light-gray);
+    cursor: pointer;
+    border-radius: 15px;
+    
+    color: var(--black2);
+    font-size: 1.1em;
+}
+
+.project-title{
+    font-size: 2.1em;
+    color: var(--black2);
+    
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+}
+
+#desc{
+    margin-right: 350px;
+    font-size: 0.5em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 60ch;
+      
+}

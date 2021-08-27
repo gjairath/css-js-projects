@@ -4,7 +4,75 @@
      <meta charset="utf-8" />
      <title>Getting Started</title>
    </head>
+
    <body>
-    <script src="main.js"></script>
+       <div id="content-wrapper">
+       
+       
+           <div id="side-bar">
+               <div id="content-side-bar">
+                   <div class="titles"> Projects </div>
+                   <div class="underline-divider"></div>
+                   <div class="projects" id="projects"></div>
+                   
+                   
+                   <div id="add-project-div"> 
+                   
+                       <div id="add-content"> 
+                          
+                           <button id="add-project"> + </button> <button id="add-task"> + </button>
+                        </div> 
+                   
+                   </div>
+                   
+               </div>
+           </div>
+       
+           <div id="main-view">
+               
+               <div id="main-top-bar">
+                   <div id="main-items">
+                        <form class="search-item" action="">
+                            <input type="search" placeholder="Search..." 
+                            id="search-bar" class="" maxlength="255" onkeyup="" value="">
+                        </form>
+                    </div>
+               </div>
+               
+               <div id="main-project-view">
+                        <div class="modal" id="modal">
+                              <form class="modal-form" id="modal-form">
+                                <label style="text-align:center;padding-bottom:25px;"> Add a Project </label>
+                                <label class="titles" for="project-name">Project Name</label> 
+                                    <input class="add-project-input" id="project-name" type="text" placeholder="Name of Project"> 
+                                    <label class="titles" for="project-description">Project Description</label> 
+                                <textarea class="add-project-input" id="project-description" type="text" placeholder="Description of Project"></textarea>
+                                <div id="submit-div">
+                                   <button class="submit-btns" id="add_project">Add Project</button>
+                                   <button class="submit-btns" type="cancel" style="width:100px;">Cancel</button>
+                                </div>                              
+                           </form>
+                        </div>
+
+
+                   <div id="main-project-content">
+                                           
+                   </div>
+
+               </div>
+               
+               
+           </div>
+           
+       <div class="overlay" id="overlay"></div>
+           
+           
+          
+       </div>
+
+   
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="styles/index.css">
    </body>
+
  </html>
