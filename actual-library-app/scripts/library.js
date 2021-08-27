@@ -2,8 +2,6 @@
 
 // https://stackoverflow.com/questions/23095637/how-do-you-get-random-rgb-in-javascript
 // Taken from here ^
-
-// je suis tres content avec ca.
 function generate_random_color() {
     var o = Math.round, r = Math.random, s = 255;
     return 'rgb(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
