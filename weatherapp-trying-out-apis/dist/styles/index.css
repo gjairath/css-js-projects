@@ -1,0 +1,335 @@
+html{
+    height: 100%;
+    width: 100%;
+    font-family: proximanova,sans-serif;
+    }
+
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+        background-color: var(--white);
+    background-color: #ffffff;
+    background-image: linear-gradient(183deg, #ffffff 47%, #d5d5d7 93%);
+
+}
+
+:root{
+    --green: #68c204;
+    --dark-blue: #045ea8;
+    --cool-gray: #455b6d;
+    --light-blue: #2fb5f5;
+    --gray: #ededed;
+    --light-gray: #f6f6f5;    
+    --white: #fff;
+    --red: #eb655e;    
+    --black: #000;
+    --black1: #181818;
+    --black2: #454545;
+}
+
+#header{
+    height: 12%;
+    width: 100%;
+}
+
+#left-tools{
+    height: 100%;
+    width: 40%;
+        
+    display: flex;
+    color: var(--dark-blue);
+}
+
+#icon{
+    height: 100%;
+    width: 30%;
+    
+    font-size: 2.2rem;
+    
+    display:flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+#search-bar{
+    height: 60%;
+    width: 70%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    
+}
+
+/* Remove the x from the bar, it sucks */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+#search {
+    height: inherit;
+    width: inherit;
+    
+    background-image: url('images/searchicon.png');
+    background-position: 4px 2px; 
+    background-repeat: no-repeat;
+    padding-left: 2.5rem;
+    background-size: 21px;
+    
+    font-size: 18px;
+    color: inherit;
+    
+    border-radius: 9px; 
+    font-weight: bold;          
+}
+
+#container-below{
+    height: calc(100% - 12% - 75px);
+    width: 100%;    
+}
+
+#text-inside:before {
+
+    content: " ";
+    left: 11%;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 100px solid var(--cool-gray);
+    border-right: 250px solid var(--cool-gray);
+    border-top: 100px solid var(--cool-gray);
+
+    border-bottom: 130px solid var(--cool-gray);
+    
+    z-index: -1;
+}
+
+#text-inside:after {
+    content: " ";
+    width: 0;
+    height: 0;
+    border-left: 100px solid white;
+    border-right: 220px solid white;
+    border-top: 100px solid white;
+
+    border-bottom: 100px solid white;
+    left: 12%;
+
+    position: absolute;
+    top: 130px;
+    z-index: -1;
+}
+
+#container-inside{
+    height: 80%;
+    width: 80%;
+
+
+    display: flex;
+    justify-content: space-around;
+    
+    margin-right: 180px;
+    margin-top: 30px;
+    color: var(--dark-blue);
+}
+
+.text-inside{
+    margin-left: 250px;
+    font-size: 1.2em;
+    font-family: Impact, Charcoal, sans-serif;
+    background-color: inherit;
+    color: inherit;
+}
+
+#search:focus{
+    height: 85%;
+    width: 85%;
+    background-color: var(--light-gray);
+    background-position: 8px 7px; 
+
+    transition: height 0.3s, width 0.3s, background-color 0.5s, background-position 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+h1{
+    font-weight: 400 !important;
+}
+
+#gif{
+    height: 100%;
+    width: 40%;    
+}
+
+img{
+    height: 60%;
+    width: 100%;
+    
+    margin-top: 35px;
+}
+
+.btn{
+    height: 42px;
+    width: 120px;
+    
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    margin-top: 15px;
+    
+    color: inherit;
+    background-color: inherit;
+}
+
+/* stuff after u search something */
+.title-forecast{
+    width: 100%;
+    height: 25px;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+    font-size: 1.6rem;
+    font-weight: bold;
+    
+    margin-top: 25px;
+    padding-bottom: 15px;
+    color: var(--dark-blue);
+}
+
+#divider {
+    border-bottom: 3px solid var(--dark-blue);
+    width: 25%;
+    margin-top: 5px;
+}
+
+.card-content{
+    height: calc(100% - 20px);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 15px;
+}
+
+.card-grid{
+    height: 95%;
+    width: 95%;
+        
+    display: flex;
+    align-items: flex-end;
+    
+    gap: 15px;
+}
+
+.card{
+    height: 90%;
+    width: 14%;
+    background-color: var(--dark-blue);
+    
+    display: flex;
+    flex-direction: column;
+
+    font-weight: bold;
+}
+
+.title-heading{
+    display: flex;
+    justify-content: flex-end;
+    
+    color: white;
+    font-size: 2.5rem;
+
+    margin-top: 5px;    
+    margin-right: 12px;
+}
+
+.sub-heading{
+    display: flex;
+    justify-content: center;
+    
+    color: white;
+    font-size: 0.9rem;
+    
+    margin-top: 5px;
+}
+
+.sexy-box{
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    
+    margin-left: 25px;
+    margin-right: 25px; /* Lmao this works for some reason */
+        
+    color: black;
+}
+
+.icon-img{
+    height: 45%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px;
+
+    margin-top: auto;
+    margin-bottom: 15px;
+    
+    padding-top: 65px;
+}
+
+.day-heading{
+    margin-top: auto;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+
+
+#warning{
+    margin-left: 500px;
+    background-color:transparent;
+    border-radius: 5px;    
+    
+    cursor: pointer;
+}
+
+/* A modal in pure CSS */
+.popover-content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transform: translate(0, 10px);
+  background-color: var(--clear-white);
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px 0 var(--cool-gray);
+  width: auto;
+}
+
+.title-forecast:hover .popover-content{
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -60px);
+  transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.title-forecast:hover #warning{
+  background-color: orange;
+  transition: background-color 0.5s;
+}
